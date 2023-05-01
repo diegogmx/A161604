@@ -1,0 +1,24 @@
+Power supply:
+	stage 1: external power supply, 230vac-48vdc, switched, pref low ripple - medical spec would be nice (super galvanic isolation)
+	stage 2: psu for control section, 5v
+	stage 3: psu for amp section: 48-45v buck/buck-boost depending on requirements
+
+audioInBoard: Input section (ADC, amps, etc) galvanically isolated, should give good protection against lightning/ground potential differences
+	Should also contain digital inputs, like SPDIF, Optical SPDIF, maybe usb
+	
+mainControlAndProcessingBoard: includes DSP, DAC, amps, uC, I/O for knobs and screen
+	Provides low impedance output to power stage
+	Modes of operation:
+		BT-DSP-DAC
+		AIN-DSP-DAC
+		DIN-DSP-DAC
+	DSP an always be set to have a 1:1 transfer function
+	probably would make sense to have digital/analog signal outputs too, the device would then be able to work as an effect processor too
+	maybe can be modularized, therefore modules which few would use can be sold separately as a premium]
+	A/D and D/A sections should be canned and filtered to minimize noise from SMPS and other surrounding stuff
+
+frontPanelKnobs: explains itself
+
+AmpBoard: Amplifier board, this in principle should be the same as the harman amp, same power stage, same first stages too
+
+
